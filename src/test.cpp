@@ -57,7 +57,7 @@ void ncnn_test_npy(char *model_path, char *param_path, char *input_name, char *o
 	/*const float mean_vals[3] = { 0.4914, 0.4822, 0.4465 };
 	const float norm_vals[3] = { 0.247, 0.243, 0.261 };*/
 	int res = 0;
-	reid_load_model(model_path, param_path);
+	load_model(model_path, param_path);
 	std::vector<int> shape;
 	std::vector<float> data;
 
@@ -77,7 +77,7 @@ void ncnn_test_npy(char *model_path, char *param_path, char *input_name, char *o
 	//		printf("%d=%0.7f\n", i, ((float*)in.channel(i))[j]);
 	//	}
 	//in.substract_mean_normalize(mean_vals, norm_vals);
-	
+
 	ncnn::Extractor ex = ncnn_net.create_extractor();
 	ex.set_light_mode(false);
 
