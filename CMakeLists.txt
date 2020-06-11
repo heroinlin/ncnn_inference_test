@@ -6,7 +6,7 @@ project(ncnn_test C CXX)
 
 #3.set environment variable，设置环境变量
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(NCNN_PATH /home/heroin/workspace/thirdparty/ncnn)
+set(NCNN_PATH ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ncnn)
 find_package(OpenMP REQUIRED)
 
 if(OPENMP_FOUND)
